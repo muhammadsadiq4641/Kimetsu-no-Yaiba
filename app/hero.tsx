@@ -86,13 +86,13 @@ const CenterImage = () => {
   );
   const opacity = useTransform(
     scrollY,
-    [SECTION_HEIGHT, SECTION_HEIGHT + 500],
+    [SECTION_HEIGHT, SECTION_HEIGHT + 3000],
     [1, 0]
   );
 
   return (
     <motion.div
-      className="sticky top-0 h-screen w-full"
+      className="sticky top-0 h-screen  bg-cover w-full"
       style={{
         clipPath,
         backgroundSize,
@@ -100,7 +100,7 @@ const CenterImage = () => {
         backgroundImage:
           "url(/assets/images/anime-bg.jpg)",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        backgroundRepeat: "no-repeat"
       }}
     />
   );
@@ -137,6 +137,14 @@ const ParallaxImages = () => {
         end={-500}
         className="ml-24 w-5/12"
       />
+
+<ParallaxImg
+        src="/assets/images/top-demons.png"
+        alt="upper ranks"
+        start={200}
+        end={-250}
+        className="mx-auto w-1/3 opacity-10"
+      />
     </div>
   );
 };
@@ -158,11 +166,10 @@ const ParallaxImg = ({
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    // @ts-ignore
     offset: [`${start}px end`, `end ${end * -1}px`],
   });
 
-  const opacity = useTransform(scrollYProgress, [0.75, 1], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0.50, 2], [1, 0]);
   const scale = useTransform(scrollYProgress, [0.75, 1], [1, 0.85]);
 
   const y = useTransform(scrollYProgress, [0, 1], [start, end]);
@@ -191,15 +198,15 @@ const Schedule = () => {
         transition={{ ease: "easeInOut", duration: 0.75 }}
         className="mb-20 text-4xl font-black uppercase text-zinc-50"
       >
-        Launch Schedule
+        Kimetsu No Yaiba
       </motion.h1>
-      <ScheduleItem title="NG-21" date="Dec 9th" location="Florida" />
-      <ScheduleItem title="Starlink" date="Dec 20th" location="Texas" />
-      <ScheduleItem title="Starlink" date="Jan 13th" location="Florida" />
-      <ScheduleItem title="Turksat 6A" date="Feb 22nd" location="Florida" />
-      <ScheduleItem title="NROL-186" date="Mar 1st" location="California" />
-      <ScheduleItem title="GOES-U" date="Mar 8th" location="California" />
-      <ScheduleItem title="ASTRA 1P" date="Apr 8th" location="Texas" />
+      <ScheduleItem title="Kokushibo" date="500 years" location="Upper Rank 1" />
+      <ScheduleItem title=" Doma" date="120 years" location="Upper Rank 2" />
+      <ScheduleItem title=" Akaza" date="200 years" location="Upper Rank 3" />
+      <ScheduleItem title="Hantengu" date="200 years" location="Upper Rank 4" />
+      <ScheduleItem title="Gyokko" date="200 years" location="Upper Rank 5" />
+      <ScheduleItem title="Kaigaku" date="100 years" location="Upper Rank 6" />
+      <ScheduleItem title="Nakime" date="bitch" location="Upper Rank 7" />
     </section>
   );
 };

@@ -2,6 +2,7 @@
 import React from "react";
 import { IoMdClose } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
+import ChipTabs from "app/motion-div/navbar-tabs";
 
 type Props = {
   isOpen: boolean;
@@ -22,25 +23,14 @@ const Drawer = ({ isOpen, onClose }: Props) => {
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
         transition={{ duration: 0.5 }}
-        className="h-full bg-[#fff] p-4 w-[200px] "
+        className="h-full bg-[#0A121A] p-4 w-[200px] "
         onClick={(e) => e.stopPropagation()}
       >
-        <IoMdClose className="text-black text-2xl mb-4" onClick={onClose} />
-        <div  className="flex flex-col text-black  justify-between gap-8">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Design</a>
-          <a href="#">Security</a>
-          <a href="#">Project</a>
+        <IoMdClose className="text-slate-300 text-2xl mb-4" onClick={onClose} />
+        <div className="flex flex-col text-black  justify-between gap-8">
+          <ChipTabs />
         </div>
-        <div className="flex flex-col items-center mt-5 gap-4">
-              <button className="border-2 border-[#4239391c] px-3 rounded">
-                Log In
-              </button>
-              <button className="border-2 border-[#4239391c] px-3 rounded">
-                Sign Up
-              </button>
-            </div>
+        
       </motion.div>
     </motion.div>
   );

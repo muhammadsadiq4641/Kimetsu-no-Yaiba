@@ -67,7 +67,7 @@ const Hero = () => {
 
       <ParallaxImages />
 
-      <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-zinc-950" />
+      <div className="absolute bottom-0 left-0 right-0 h-96 " />
     </div>
   );
 };
@@ -113,14 +113,14 @@ const ParallaxImages = () => {
         src="/assets/images/anime-girl.jpg"
         alt="asd"
         start={-200}
-        end={200}
+        end={150}
         className="w-1/3 rounded-md shadow-2xl waghera"
       />
       <ParallaxImg
         src="/assets/images/anime-ninja.jpg"
         alt="asd"
-        start={200}
-        end={-250}
+        start={300}
+        end={-150}
         className="mx-auto w-2/3 waghera"
       />
       <ParallaxImg
@@ -142,7 +142,7 @@ const ParallaxImages = () => {
         src="/assets/images/top-demons.png"
         alt="upper ranks"
         start={200}
-        end={-150}
+        end={-450}
         className="mx-auto w-2/3 opacity-10 waghera"
       />
     </div>

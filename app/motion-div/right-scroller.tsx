@@ -83,7 +83,7 @@ const Links: React.FC = () => {
 
 const CenterCopy: React.FC = () => {
   return (
-    <div className="flex items-center justify-center px-4">
+    <div className="flex items-center md:mt-28 mt-56 justify-center px-4">
       <img
         src="/assets/images/image-7.jpg"
         alt="Placeholder image"
@@ -93,7 +93,7 @@ const CenterCopy: React.FC = () => {
         Some of The  <br />
         Best Characters <br />
         of all Time{" "}
-        <span className="inline-block -skew-x-[18deg] font-black text-neutral-950">
+        <span className="inline-block -skew-x-[18deg] font-black text-slate-300">
           Zincc
         </span>
       </h1>

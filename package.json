@@ -12,6 +12,8 @@
   "dependencies": {
     "@react-pdf-viewer/core": "^3.12.0",
     "@react-pdf-viewer/default-layout": "^3.12.0",
+    "@react-three/drei": "^9.112.0",
+    "@react-three/fiber": "^8.17.6",
     "@web3modal/ethers5": "^5.0.6",
     "antd": "^5.14.0",
     "axios": "^1.6.7",
@@ -34,6 +36,7 @@
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "react-timer-hook": "^3.0.7",
+    "react-use-measure": "^2.1.1",
     "sharp": "^0.33.3",
     "socket.io-client": "^4.7.4",
     "styled-components": "^6.1.8",

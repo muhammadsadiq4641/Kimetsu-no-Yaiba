@@ -10,6 +10,8 @@ import ThirdButton from "./motion-div/third-button";
 import { SmoothScrollHero } from "./hero";
 import { StickyCards } from "./motion-div/sticky-cards";
 import { DisappearingFeatures } from "./motion-div/dissapearingFeatures";
+import { VelocityHero } from "./motion-div/right-scroller";
+import { DragCloseDrawerExample } from "./motion-div/footer-modal";
 
 const Home: React.FC = () => {
   const [Mode, setMode] = useState<boolean>(false);
@@ -26,7 +28,11 @@ const Home: React.FC = () => {
           <SecondButton />
           <ThirdButton />
         </div>
+        <VelocityHero />
         <DisappearingFeatures />
+        <div>
+          <DragCloseDrawerExample />
+        </div>
     </main>
   );
 };

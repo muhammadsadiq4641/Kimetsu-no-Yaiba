@@ -8,6 +8,8 @@ import ButtonMotion from "./motion-div/button";
 import SecondButton from "./motion-div/secondButton";
 import ThirdButton from "./motion-div/third-button";
 import { SmoothScrollHero } from "./hero";
+import { StickyCards } from "./motion-div/sticky-cards";
+import { DisappearingFeatures } from "./motion-div/dissapearingFeatures";
 
 const Home: React.FC = () => {
   const [Mode, setMode] = useState<boolean>(false);
@@ -15,16 +17,16 @@ const Home: React.FC = () => {
     <main>
       <Navbar />
       <SmoothScrollHero />
-      <div className="container mx-auto">
+      <StickyCards />
         {/* <TextForm />
         <ButtonPrac />
         <ButtonPrac /> */}
-        <div className="flex flex-col gap-10 sm:flex-row items-center justify-between">
+        <div className="flex flex-col h-[30vh] gap-10 sm:flex-row items-center bg-black justify-evenly">
           <ButtonMotion />
           <SecondButton />
           <ThirdButton />
         </div>
-      </div>
+        <DisappearingFeatures />
     </main>
   );
 };

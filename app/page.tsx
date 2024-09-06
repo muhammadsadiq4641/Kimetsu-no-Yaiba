@@ -23,7 +23,7 @@ const Home: React.FC = () => {
         {/* <TextForm />
         <ButtonPrac />
         <ButtonPrac /> */}
-        <div className="flex flex-col h-[30vh] gap-10 sm:flex-row items-center bg-black justify-evenly">
+        <div className="flex flex-col h-[30vh] gap-10 sm:flex-row items-center bg-[#09090B] justify-evenly">
           <ButtonMotion />
           <SecondButton />
           <ThirdButton />

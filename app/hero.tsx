@@ -143,7 +143,7 @@ const ParallaxImages = () => {
         alt="upper ranks"
         start={200}
         end={-150}
-        className="mx-auto w-1/3 opacity-10 waghera"
+        className="mx-auto w-2/3 opacity-10 waghera"
       />
     </div>
   );

@@ -29,7 +29,6 @@ export const VelocityHero: React.FC = () => {
   return (
     <section ref={targetRef} className="h-[500vh] bg-[#09090B] text-neutral-950">
       <div className="sticky top-0 flex h-screen flex-col justify-between overflow-hidden">
-        <Nav />
         <CenterCopy />
         <motion.div
           style={{ skewX, x }}
@@ -48,21 +47,9 @@ export const VelocityHero: React.FC = () => {
   );
 };
 
-const Nav: React.FC = () => {
-  return (
-    <div className="relative mb-1 flex w-full justify-between p-6">
-      <p className="hidden text-xs text-neutral-400 md:block">
-        40° 42' 46" N, 74° 0' 21" W
-        <br />
-      </p>
-      <Logo />
-      <Links />
-    </div>
-  );
-};
+
 
 const Logo: React.FC = () => {
-  // Temp logo from https://logoipsum.com/
   return (
     <svg
       width="36"
@@ -100,7 +87,7 @@ const CenterCopy: React.FC = () => {
       <img
         src="/assets/images/image-7.jpg"
         alt="Placeholder image"
-        className="mr-2 h-full w-20 bg-neutral-200 object-cover"
+        className="mr-2 h-full shadow-2xl shadow-[#ffffff75] w-20 bg-neutral-200 object-cover"
       />
       <h1 className="text-3xl font-bold text-neutral-400 sm:text-5xl md:text-7xl">
         Some of The  <br />

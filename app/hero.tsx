@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { SiNodemon } from "react-icons/si";
 import Lenis from "lenis";
 import {
   motion,
@@ -39,7 +40,7 @@ export const SmoothScrollHero = () => {
 const Nav = () => {
   return (
     <nav className="fixed left-0 right-0 top-10 z-50 flex items-center justify-between px-6 py-3 text-white">
-      <SiSpacex className="text-3xl mix-blend-difference" />
+      <SiNodemon className="text-xl mix-blend-difference" />
       <button
         onClick={() => {
           document.getElementById("launch-schedule")?.scrollIntoView({
@@ -48,7 +49,7 @@ const Nav = () => {
         }}
         className="flex items-center gap-1 text-xs text-zinc-400"
       >
-        LAUNCH SCHEDULE <FiArrowRight />
+        Upper Ranks <FiArrowRight />
       </button>
     </nav>
   );
@@ -81,7 +82,7 @@ const CenterImage = () => {
 
   const backgroundSize = useTransform(
     scrollY,
-    [0, SECTION_HEIGHT + 500],
+    [0, SECTION_HEIGHT + 100],
     ["170%", "100%"]
   );
   const opacity = useTransform(
@@ -97,10 +98,9 @@ const CenterImage = () => {
         clipPath,
         backgroundSize,
         opacity,
-        backgroundImage:
-          "url(/assets/images/anime-bg.jpg)",
+        backgroundImage: "url(/assets/images/anime-bg.jpg)",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
+        backgroundRepeat: "no-repeat",
       }}
     />
   );
@@ -114,36 +114,36 @@ const ParallaxImages = () => {
         alt="asd"
         start={-200}
         end={200}
-        className="w-1/3 rounded-md shadow-2xl"
+        className="w-1/3 rounded-md shadow-2xl waghera"
       />
       <ParallaxImg
         src="/assets/images/anime-ninja.jpg"
         alt="asd"
         start={200}
         end={-250}
-        className="mx-auto w-2/3"
+        className="mx-auto w-2/3 waghera"
       />
       <ParallaxImg
         src="/assets/images/tanjiro-kamado.jpeg"
         alt="tanjiro kamado"
         start={-200}
-        end={200}
-        className="ml-auto w-1/3"
+        end={100}
+        className="ml-auto w-1/3 waghera"
       />
       <ParallaxImg
         src="/assets/images/hashiras.png"
         alt="hashiras"
         start={0}
         end={-500}
-        className="ml-24 w-5/12"
+        className="ml-24 w-5/12 waghera"
       />
 
-<ParallaxImg
+      <ParallaxImg
         src="/assets/images/top-demons.png"
         alt="upper ranks"
         start={200}
-        end={-250}
-        className="mx-auto w-1/3 opacity-10"
+        end={-150}
+        className="mx-auto w-1/3 opacity-10 waghera"
       />
     </div>
   );
@@ -169,10 +169,11 @@ const ParallaxImg = ({
     offset: [`${start}px end`, `end ${end * -1}px`],
   });
 
-  const opacity = useTransform(scrollYProgress, [0.50, 2], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0.75, 1], [1, 0.85]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
   const y = useTransform(scrollYProgress, [0, 1], [start, end]);
+
   const transform = useMotionTemplate`translateY(${y}px) scale(${scale})`;
 
   return (
@@ -200,7 +201,11 @@ const Schedule = () => {
       >
         Kimetsu No Yaiba
       </motion.h1>
-      <ScheduleItem title="Kokushibo" date="500 years" location="Upper Rank 1" />
+      <ScheduleItem
+        title="Kokushibo"
+        date="500 years"
+        location="Upper Rank 1"
+      />
       <ScheduleItem title=" Doma" date="120 years" location="Upper Rank 2" />
       <ScheduleItem title=" Akaza" date="200 years" location="Upper Rank 3" />
       <ScheduleItem title="Hantengu" date="200 years" location="Upper Rank 4" />

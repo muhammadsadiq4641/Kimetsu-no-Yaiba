@@ -18,7 +18,7 @@ const Navbar:FC = () => {
   };
 
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-300">
       <div className="container mx-auto px-4">
         <div className="flex justify-between py-3">
           <div>

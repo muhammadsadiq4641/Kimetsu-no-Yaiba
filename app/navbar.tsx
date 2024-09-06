@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { PiGitlabLogoDuotone } from "react-icons/pi";
 import { TbMenuDeep } from "react-icons/tb";
 import Drawer from "./api/drawer";
 import { AnimatePresence } from "framer-motion";
 
-const Navbar = () => {
+const Navbar:FC = () => {
   const [isOpen, setisOpen] = useState(false);
 
   const ShowDrawer = () => {

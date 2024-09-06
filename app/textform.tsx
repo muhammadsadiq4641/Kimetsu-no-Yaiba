@@ -2,6 +2,7 @@
 import { color } from "framer-motion";
 import React, { useState } from "react";
 
+
 const TextForm = () => {
   const [text, setText] = useState("enter the text");
   const [showPreview, setShowPreview] = useState(false);
@@ -21,7 +22,7 @@ const TextForm = () => {
     } else {
       setmyStyle({
         color: "black",
-    backgroundColor: "white",
+        backgroundColor: "white",
       });
     }
   };
@@ -57,11 +58,15 @@ const TextForm = () => {
   const wordCount = calculateWordCount(text);
   const charCount = text.length;
   const readingTime = (0.008 * wordCount).toFixed(2);
-
   return (
     <div>
       <div className="px-4 rounded-lg py-4" style={myStyle}>
-        <button className="bg-gray-400 text-white px-4 py-2 rounded" onClick={ToggleStyle}>{btnText}</button>
+        <button
+          className="bg-gray-400 text-white px-4 py-2 rounded"
+          onClick={ToggleStyle}
+        >
+          {btnText}
+        </button>
         <h1 className="text-3xl mb-2">Enter the text to analyze</h1>
         <div className="mb-3">
           <label htmlFor="myBox" className="form-Label">
@@ -97,7 +102,6 @@ const TextForm = () => {
         </div>
       </div>
       <div className="container mx-auto my-2">
-        
         <p className="border w-[250px] px-3 mt-4 py-2 rounded-lg bg-gray-300">
           {text.split(" ").length} words and {text.length} characters
         </p>
@@ -114,6 +118,8 @@ const TextForm = () => {
             <p>{text}</p>
           </div>
         )}
+
+       
       </div>
     </div>
   );

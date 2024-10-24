@@ -12,6 +12,7 @@ import { StickyCards } from "./motion-div/sticky-cards";
 import { DisappearingFeatures } from "./motion-div/dissapearingFeatures";
 import { VelocityHero } from "./motion-div/right-scroller";
 import { DragCloseDrawerExample } from "./motion-div/footer-modal";
+import Faqs from "./(home)/afo-footer";
 
 const Home: React.FC = () => {
   const [Mode, setMode] = useState<boolean>(false);
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
       <div>
         <DragCloseDrawerExample />
       </div>
+      <Faqs />
     </main>
   );
 };

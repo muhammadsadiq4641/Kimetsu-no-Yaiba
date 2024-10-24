@@ -1,6 +1,11 @@
-import React, { useRef } from 'react';
-import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
-import { FiArrowRight } from 'react-icons/fi';
+import React, { useRef } from "react";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
 
 const SPRING_OPTIONS = {
   mass: 1.5,

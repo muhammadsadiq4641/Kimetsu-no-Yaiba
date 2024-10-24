@@ -16,23 +16,23 @@ import { DragCloseDrawerExample } from "./motion-div/footer-modal";
 const Home: React.FC = () => {
   const [Mode, setMode] = useState<boolean>(false);
   return (
-    <main>
+    <main className="min-h-screen">
       <Navbar />
       <SmoothScrollHero />
       <StickyCards />
-        {/* <TextForm />
-        <ButtonPrac />
-        <ButtonPrac /> */}
-        <div className="flex flex-col h-[30vh] gap-10 sm:flex-row items-center bg-[#09090B] justify-evenly">
-          <ButtonMotion />
-          <SecondButton />
-          <ThirdButton />
-        </div>
-        <VelocityHero />
-        <DisappearingFeatures />
-        <div>
-          <DragCloseDrawerExample />
-        </div>
+      {/* <TextForm />
+      <ButtonPrac />
+      <ButtonPrac /> */}
+      {/* <div className="flex flex-col h-[30vh] gap-10 sm:flex-row items-center bg-[#09090B] justify-evenly">
+        <ButtonMotion />
+        <SecondButton />
+        <ThirdButton />
+      </div> */}
+      <VelocityHero />
+      <DisappearingFeatures />
+      <div>
+        <DragCloseDrawerExample />
+      </div>
     </main>
   );
 };

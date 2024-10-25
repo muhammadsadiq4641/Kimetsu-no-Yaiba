@@ -13,6 +13,7 @@ import { DisappearingFeatures } from "./motion-div/dissapearingFeatures";
 import { VelocityHero } from "./motion-div/right-scroller";
 import { DragCloseDrawerExample } from "./motion-div/footer-modal";
 import Faqs from "./(home)/afo-footer";
+import RoadMap from "./(home)/roadmap";
 
 const Home: React.FC = () => {
   const [Mode, setMode] = useState<boolean>(false);
@@ -34,6 +35,7 @@ const Home: React.FC = () => {
       <div>
         <DragCloseDrawerExample />
       </div>
+      <RoadMap />
       <Faqs />
     </main>
   );

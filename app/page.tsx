@@ -14,12 +14,16 @@ import { VelocityHero } from "./motion-div/right-scroller";
 import { DragCloseDrawerExample } from "./motion-div/footer-modal";
 import Faqs from "./(home)/afo-footer";
 import RoadMap from "./(home)/roadmap";
+import SpiderCanvas from "./(home)/spider";
 
 const Home: React.FC = () => {
   const [Mode, setMode] = useState<boolean>(false);
   return (
     <main className="min-h-screen">
       <Navbar />
+      <div className="overflow-hidden">
+        <SpiderCanvas />
+      </div>
       <SmoothScrollHero />
       <StickyCards />
       {/* <TextForm />
